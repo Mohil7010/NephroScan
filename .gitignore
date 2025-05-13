@@ -1,0 +1,30 @@
+# === Python / Django ===
+*.pyc
+__pycache__/
+db.sqlite3
+env/
+venv/
+*.sqlite3
+*.log
+
+# === Django media / static files ===
+media/
+staticfiles/
+
+# === VSCode and PyCharm ===
+.vscode/
+.idea/
+
+# === Node / React ===
+node_modules/
+build/
+.env
+.DS_Store
+npm-debug.log
+
+# === OS files ===
+Thumbs.db
+.DS_Store
+
+# === Ultralytics cache ===
+runs/
