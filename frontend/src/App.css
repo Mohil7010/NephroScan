@@ -1,0 +1,666 @@
+* {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+.header {
+  position: fixed;
+  width: 100%;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent; /* Transparent by default */
+  color: white;
+}
+
+.header.scrolled {
+  background-color: white; /* Background color when scrolled */
+  color: black;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for emphasis */
+}
+.logo-image {
+  height: 100px;
+  width: 100px;
+}
+.logo {
+  margin-left: 80px;
+}
+.header-ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-ul-li {
+  cursor: pointer;
+  color: black;
+  transition: color 0.3s ease;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.header-ul-li:hover {
+  color: orange; /* Change the color on hover */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.login-button button {
+  background-color: black;
+  color:  white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 45px;
+  width: 120px;
+  margin-left: -200px;
+
+}
+
+.login-button button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+  border: 2px solid black;
+}
+
+/* Content Sections */
+section {
+  /* Avoid overlap from the fixed header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-1 {
+  height: 820px;
+  width: 100%;
+  text-align: center;
+  background-image: url(../src/Images/medical-8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.s1-button {
+  height: 60px;
+  width: 180px;
+  background-color: black;  
+  color: white;
+  border-radius: 10px;
+  margin-top: 350px;
+  border: 2px solid black;
+}
+.s1-button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+.section-2 {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  background-color: white;
+}
+.s2-img-div {
+  width: 40%;
+}
+.s2-img {
+  height: 300px;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 70px;
+  margin-top: 120px;
+}
+.s2-desc {
+  width: 60%;
+  margin-left: 100px;
+  
+}
+.s2-desc h2 {
+  margin-left: 30px;
+  font-size: xxx-large;
+  font-weight: 900;
+  margin-top: 140px;
+}
+.text{
+  background: linear-gradient(23deg, #28e3b3, #2892e3, #7b28e3, #e3286c, #28e3d9, #e3dc28, #28e355, #e3a228);
+  background-size: 1600% 1600%;
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  -o-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
+}
+.text{
+  text-align: center;
+  color: #000;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.s2-desc p {
+  font-size: x-large;
+  margin-left: 200px;
+  margin-right: 120px;
+  margin-top: 30px;
+  font-weight: 400;
+}
+.upload-section {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  width: 400px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  transition: border-color 0.3s;
+  margin-left: 80px;
+  margin-top: 30px
+}
+.upload-section:hover {
+  border-color: #666;
+}
+.upload-section.drag-over {
+  border-color: #007BFF;
+  background-color: #e9f5ff;
+}
+.upload-section img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  border-radius: 5px;
+}
+.upload-section input {
+  display: none;
+}
+.instructions {
+  color: #888;
+  font-size: 14px;
+}
+.section-3 {
+  height: 500px;
+  width: 100%;
+  background-image: url(../src/Images/kidney-8.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+}
+.section-4 {
+  background-color: #fefefe;
+  background-image: radial-gradient(#5394fd 1.2px, #fefefe 1.2px);
+  background-size: 24px 24px;
+  width: 100%;
+  margin-top: 20px;
+}
+.section-5 {
+  background-color: #fefefe;
+  background-image: radial-gradient(#5394fd 1.2px, #fefefe 1.2px);
+  background-size: 24px 24px;
+  width: 100%;
+  margin-bottom: 0px;
+}
+.footer {
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  margin-top: 30px;
+}
+.footer-logo {
+  width: 20%;
+  border-right: 2px solid white;
+}
+.footer img {
+  margin-left: 80px;
+  margin-top: 50px;
+}
+.footer h3 {
+  margin-top: -5px;
+  margin-left: 82px;
+  color: orange;
+}
+.inquiry {
+  width: 60%;
+  margin-top: 55px;
+  display: flex;
+}
+.inquiry textarea {
+  height: 50px;
+  width: 300px;
+  border: 2px solid black;
+  border-right: none;
+  margin-left: 250px;
+}
+.inq-btn {
+  height: 57px;
+  width: 120px;
+  margin-left: 0px;
+  background-color: white;
+  border: 2px solid black;
+}
+.inquiry h3 {
+  margin-left: -320px;
+  margin-top: 90px;
+}
+.inq-btn:hover {
+  background-color: lightgray;
+}
+.back-to-top-btn {
+  height: 50px;
+  width: 120px;
+  margin-top: 80px;
+  margin-left: 60px;
+  border-radius: 20px;
+}
+.btt-div {
+  border-left: 2px solid white;
+}
+
+
+.auth-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-form .input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.auth-form .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.auth-form .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper .toggle-password {
+  margin-left: -30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.auth-button {
+  background-color: #6a11cb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #2575fc;
+}
+
+.switch-link {
+  margin-top: 10px;
+  color: #2575fc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.switch-link span {
+  font-weight: bold;
+}
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+  background: #f0f0f0;
+}
+
+.profile-body {
+  padding-top: 70px;
+  padding-bottom: 265px;
+  background: url(../src/Images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1
+}
+.profile-page {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px);
+  margin-top: 150px;
+  text-align: center;
+  margin-bottom: -10px;
+}
+
+.profile-page h1 {
+  text-align: center;
+}
+
+.profile-page .profile-details p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.login-body {
+  padding-top: 180px;
+  padding-bottom: 275px;
+  background: url(../src/Images/medical-8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.login-page {
+  height: 300px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 470px;
+  margin-top: -30px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px);
+}
+
+.top1 {
+  height: 70px;
+  width: 600px;
+  margin-left: 470px;
+  margin-top: 60px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  border-bottom: none;
+  background-color: white;
+}
+
+h2 {
+  margin-top: 7px;
+}
+
+.login-page input {
+  height: 40px;
+  width: 220px;
+  margin-top: 70px;
+  margin-left: 35px;
+  margin-right: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+}
+
+.login-page button {
+  height: 40px;
+  width: 270px;
+  margin-top: 100px;
+  margin-left: 160px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* .login-page button:hover {
+  background-color: darkblue;
+  color: white;
+  transition: 0.75s;
+} */
+
+.login-page p {
+  margin-left: 180px;
+  margin-top: 15px;
+}
+.register-page {
+  height: 550px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 20px;
+  margin-left: 470px;
+  margin-top: -30px;
+  background-color: rgba(255, 255, 255, 0.8); 
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.top2 {
+height: 70px;
+width: 600px;
+margin-left: 470px;
+margin-top: 0px;
+text-align: center;
+border: 2px solid black;
+border-radius: 20px;
+border-bottom: none;
+background-color: white;
+}
+
+.register-page input {
+  height: 40px;
+  width: 350px;
+  margin-top: 50px;
+  margin-left: 120px;
+  margin-right: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+  display: block;
+}
+
+.register-page button {
+height: 40px;
+width: 270px;
+margin-top: 80px;
+margin-left: 160px;
+border-radius: 10px;
+background-color: white;
+border: 1px solid black;
+cursor: pointer;
+}
+
+/* .register-page button:hover {
+background-color: darkblue;
+color: white;
+transition: 0.75s;
+} */
+
+.register-page p {
+margin-left: 180px;
+margin-top: 15px;
+}
+
+.register-body {
+padding-top: 100px;
+padding-bottom: 220px;
+background: url(../src/Images/medical-8.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+opacity: 1;
+}
+
+/* Error message positioning */
+.error-message {
+position: absolute;
+top: 60px;
+left: 0;
+right: 0;
+text-align: center;
+color: red;
+font-size: 14px;
+}
+.result-body {
+    width: 800px; 
+    height: 550px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    backdrop-filter: blur(10px); 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+}
+.result-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(../src/Images/bg-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.result-page h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.result-image {
+  max-width: 80%;
+  max-height: 400px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color:rgb(34, 159, 159);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.logo-image-div {
+  margin-left: -1400px;
+  margin-top: -60px;
+}
+
+.back-button-1 {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color:rgb(34, 159, 159);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.back-button-2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color:rgb(34, 159, 159);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+}
