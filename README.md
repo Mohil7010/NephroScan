@@ -70,5 +70,5 @@ npm start
 
 ## Contact
 
-Maintainer: [Mohil Shastri]  
+Maintainer: Mohil Shastri  
 GitHub: [github.com/Mohil7010](https://github.com/Mohil7010)
